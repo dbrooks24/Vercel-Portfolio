@@ -72,7 +72,9 @@ const Home: NextPage = () => {
         
         <div className="flex w-full px-2 gap-y-4 gap-x-4 flex-wrap justify-center">
         {ThingsGoodAt.map((item) => (
-                          <div className="px-3 py-2 backdrop-blur-md bg-white/50 rounded-md text-xl shadow-2xl self-center">
+                          <div
+                            key={item.Text} 
+                            className="px-3 py-2 backdrop-blur-md bg-white/50 rounded-md text-xl shadow-2xl self-center">
                             {item.Text}
                           </div>
                         ))}
