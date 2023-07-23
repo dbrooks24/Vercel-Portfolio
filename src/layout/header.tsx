@@ -5,6 +5,7 @@ import {
   Bars3Icon,
   XMarkIcon,
   QuestionMarkCircleIcon,
+  ChatBubbleBottomCenterTextIcon,
 } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import { Divider } from "@nextui-org/react";
@@ -15,7 +16,12 @@ export default function Header() {
     {
       name: "Home",
       href: "/",
-      current: false,
+      current: true,
+    },
+    {
+        name: "Résumé",
+        href: "/DavidBrooks_resume - with deliverables - no addr.pdf",
+        current: false,
     },
   ];
 
@@ -27,7 +33,7 @@ export default function Header() {
   // return a dynamic navbar that has a mobile view (Disclosure button) when below specific pixel count
   return (
     <>
-      <Disclosure as="nav" aria-label="navigation bar" className="sticky top-0 z-40 w-full backdrop-blur flex-none transition-colors duration-500 lg:z-50 lg:border-b lg:border-slate-900/10 dark:border-slate-50/[0.06] bg-white/95 supports-backdrop-blur:bg-white/60 dark:bg-transparent">
+      <Disclosure as="nav" aria-label="navigation bar" className="absolute w-full top-0 bg-white bg-opacity-30">
         {({ open }) => {
           return (
             <>
@@ -58,12 +64,8 @@ export default function Header() {
                             key={item.name}
                             href={item.href}
                             className={classNames(
-                              item.current
-                                ? "Navbutton-selected"
-                                : "Navbutton-unselected",
-                              " rounded-md px-3 py-2 text-sm font-medium"
+                              "rounded-md px-3 py-2 text-sm font-medium Navbutton-unselected"
                             )}
-                            aria-current={item.current ? "page" : undefined}
                           >
                             {item.name}
                           </a>
@@ -74,13 +76,13 @@ export default function Header() {
                   <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:pr-0">
                     <div className="flex space-x-4">
                       <Link
-                        className="Navbutton-unselected rounded-full text-black bg-white hover:text-white focus:outline-none"
+                        className="Navbutton-unselected text-black  hover:text-white focus:outline-none"
                         type="button"
-                        href="/guide"
+                        href="/Contact"
                       >
-                        <span className="sr-only">Questions and Help</span>
-                        <QuestionMarkCircleIcon
-                          className="h-8 w-8"
+                        <span className="absolute inset-y-3 right-0 rounded-full h-3 w-3 bg-[#002664] bg-opacity-90 animate-ping"></span>
+                        <ChatBubbleBottomCenterTextIcon
+                          className="h-8 w-8 "
                           aria-hidden="true"
                         />
                       </Link>
