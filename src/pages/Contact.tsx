@@ -5,7 +5,7 @@ import Link from "next/link";
 
 
 
-import { Input, Textarea} from "@nextui-org/react";
+import { Input, Textarea } from "@nextui-org/react";
 
 
 
