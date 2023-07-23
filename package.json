@@ -1,5 +1,5 @@
 {
-  "name": "personal-portfolio",
+  "name": "my-app",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,6 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.15",
+    "@heroicons/react": "^2.0.18",
+    "@nextui-org/react": "^1.0.0-beta.13",
     "@types/node": "20.4.4",
     "@types/react": "18.2.15",
     "@types/react-dom": "18.2.7",
