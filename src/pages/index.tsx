@@ -74,7 +74,7 @@ const Home: NextPage = () => {
         {ThingsGoodAt.map((item) => (
                           <div
                             key={item.Text} 
-                            className="px-3 py-2 backdrop-blur-md bg-white/50 rounded-md text-xl shadow-2xl self-center">
+                            className="px-3 py-2 bg-white/50 rounded-md text-xl shadow-2xl">
                             {item.Text}
                           </div>
                         ))}
@@ -90,7 +90,7 @@ const Home: NextPage = () => {
             <span className="">David Austin Brooks</span>
           </h1>
           <div className="flex w-5/6">
-            <div className="px-5 py-4 backdrop-blur-md bg-white/50 rounded-md text-xl shadow-2xl">
+            <div className="px-5 py-4 bg-white/50 rounded-md text-xl shadow-2xl text-center">
               For as long as I can remember I have been fascinated with technology and how it functions. 
               I used to take apart and put together all kinds of things just to see how they worked. 
               I love to learn new things and I am always looking for a way to expand my knowledge. 

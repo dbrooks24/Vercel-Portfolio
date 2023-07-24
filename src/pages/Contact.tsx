@@ -5,10 +5,12 @@ import Link from "next/link";
 
 
 
-import { Input, Textarea } from "@nextui-org/react";
+import { Input, Textarea, Button } from "@nextui-org/react";
 
 
-
+const ButtonPressedHandler = () => {
+    alert('Button clicked!');
+}
 
 // Home page for starting a test
 const Home: NextPage = () => {
@@ -29,13 +31,16 @@ const Home: NextPage = () => {
                 <span className="">Send Me A Message</span>
             </div>
             <form>  
-            <div className="flex gap-y-4 gap-x-4 items-center justify-center">
-                <Input id="FirstName" clearable bordered labelPlaceholder="First Name" />
-                <Input id="LasttName" clearable bordered labelPlaceholder="Last Name" />
-                <Input clearable bordered width="400px" labelPlaceholder="email address" />
+            <div className="flex gap-y-4 gap-x-4 items-center justify-center ">
+                <Input id="FirstName" clearable bordered color="primary" labelPlaceholder="First Name" />
+                <Input id="LasttName" clearable bordered color="primary" labelPlaceholder="Last Name" />
+                <Input clearable bordered width="250px" color="primary" labelPlaceholder="email address" />
             </div>
             <div className="flex pt-12 gap-y-4 gap-x-4 items-center justify-center">
-                <Textarea id="MSG" bordered placeholder="Message" minRows={4} width="400px"/>
+                <Textarea id="MSG" color="primary" bordered placeholder="Message" minRows={1} width="400px"/>
+            </div>
+            <div className="flex pt-12 gap-y-4 gap-x-4 items-center justify-center">
+                <Button onPress={ButtonPressedHandler} >Send</Button>
             </div>
             </form>
 

@@ -13,7 +13,7 @@
     @apply justify-self-center rounded bg-[#eaab00] text-black ring-0;
   }
   .Navbutton-unselected {
-    @apply justify-self-center rounded bg-white text-black ring-0 hover:bg-[#002664] hover:text-white;
+    @apply justify-self-center rounded bg-black/10 text-black ring-0 hover:bg-[#002664] hover:text-white;
   }
 }
 
