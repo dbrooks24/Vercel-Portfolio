@@ -3,6 +3,7 @@ import Image from "next/image";
 import Head from "next/head";
 import Link from "next/link";
 
+import { Text } from "@nextui-org/react";
 
 const ThingsGoodAt = [
   {
@@ -68,7 +69,18 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#CAF0F8] to-[#023E8A]">
-        <div className="container flex flex-col items-center justify-center gap-12 py-40">
+      <Text className="text-center"
+        h1
+        size={60}
+        css={{
+          textGradient: "45deg, $blue700 -20%, $blue800 100%",
+        }}
+        weight="bold"
+      >
+        David Austin Brooks
+      </Text>
+        
+        <div className="container flex flex-col items-center justify-center gap-12 py-8">
         
         <div className="flex w-full px-2 gap-y-4 gap-x-4 flex-wrap justify-center">
         {ThingsGoodAt.map((item) => (
@@ -86,9 +98,6 @@ const Home: NextPage = () => {
                             height="512"
                             alt="Logo"
                           />
-          <h1 className="pb-2 text-center text-5xl font-medium tracking-tight text-white sm:text-[5rem]">
-            <span className="">David Austin Brooks</span>
-          </h1>
           <div className="flex w-5/6">
             <div className="px-5 py-4 bg-white/50 rounded-md text-xl shadow-2xl text-center">
               For as long as I can remember I have been fascinated with technology and how it functions. 
