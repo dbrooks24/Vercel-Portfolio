@@ -33,7 +33,7 @@ export default function Header() {
   // return a dynamic navbar that has a mobile view (Disclosure button) when below specific pixel count
   return (
     <> 
-      <Disclosure as="nav" aria-label="navigation bar" className="sticky w-full top-0 bg-white bg-opacity-40">
+      <Disclosure as="nav" aria-label="navigation bar" className="absolute w-full top-0 bg-white bg-opacity-40">
         {({ open }) => {
           return (
             <>
