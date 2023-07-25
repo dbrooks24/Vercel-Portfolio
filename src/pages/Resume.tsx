@@ -48,10 +48,10 @@ const Resume: NextPage = () => {
                 <span className="sm:hidden text-center items-center flex flex-col gap-y-14">
                     Mobile View Detected:
                     <Tooltip
-                        color="primary" // Add required color property
+                        color="default" // Add required color property
                         css={{ zIndex: 999 }} // Add required css property
                         content="Open my Résumé in a new tab"
-                        contentColor="white" // Add required contentColor property
+                        contentColor="default" // Add required contentColor property
                         initialVisible={true}
                     >
                         <Button onPress={ButtonPressedHandler}>

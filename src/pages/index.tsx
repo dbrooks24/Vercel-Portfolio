@@ -77,7 +77,11 @@ const Home: NextPage = () => {
         }}
         weight="bold"
       >
-        David Austin Brooks
+        <span className="sm:hidden">
+          <br/>
+        </span>
+
+         David Austin Brooks
       </Text>
         
         <div className="container flex flex-col items-center justify-center gap-12 py-8">
