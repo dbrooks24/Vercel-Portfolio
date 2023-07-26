@@ -5,15 +5,94 @@ import Link from "next/link";
 
 
 
-import { Input, Textarea, Button } from "@nextui-org/react";
+import { Input, Textarea, Button, FormElement} from "@nextui-org/react";
+import { useState } from "react";
 
-
-const ButtonPressedHandler = () => {
-    alert('Button clicked!');
-}
 
 // Home page for starting a test
 const Home: NextPage = () => {
+    
+    //webhooks
+        //form settings
+        const [FirstName, setFirstName] = useState("");
+        const [LastName, setLastName]   = useState("");
+        const [Email, setEmail]         = useState("");
+        const [Message, setMessage]     = useState("");
+    
+        //form view options (make error)
+        const [FirstNameStatus, setFirstNameStatus] = useState<"default" | "error" | "success">("default");
+        const [LastNameStatus, setLastNameStatus]   = useState<"default" | "error" | "success">("default");
+        const [EmailStatus, setEmailStatus]         = useState<"default" | "error" | "success">("default");
+        const [MessageStatus, setMessageStatus]     = useState<"default" | "error" | "success">("default");
+
+
+    //handlers
+    const FormSubmissionHandler = () => {
+        event?.preventDefault(); //prevent the deafult form submission behavior
+        
+            alert(
+                "FirstName: " + FirstName + "\n" +
+                "LastName: " + LastName + "\n" +
+                "Email: " + Email + "\n" +
+                "Message: " + Message 
+            ) 
+            
+
+    };
+
+    const handleFormInput = (event: React.ChangeEvent<FormElement>, InputID: string) => {
+        const newInputValue = event.target.value;
+        switch (InputID) {
+            case "FirstName":
+                setFirstName(newInputValue)
+                if(newInputValue == "")
+                {
+                    setFirstNameStatus("error")
+                }
+                else
+                {
+                    setFirstNameStatus("default")
+                }
+                break;
+            case "LastName":
+                setLastName(newInputValue)
+                if(newInputValue == "")
+                {
+                    setLastNameStatus("error")
+                }
+                else
+                {
+                    setLastNameStatus("default")
+                }
+                break;
+            case "EmailAdr":
+                setEmail(newInputValue)
+                if(newInputValue == "")
+                {
+                    setEmailStatus("error")
+                }
+                else
+                {
+                    setEmailStatus("default")
+                }
+                break;
+            case "MSG":
+                setMessage(newInputValue)
+                if(newInputValue == "")
+                {
+                    setMessageStatus("error")
+                }
+                else
+                {
+                    setMessageStatus("default")
+                }
+                break;
+            default:
+                break;
+        }
+    };  
+
+
   return (
     <>
       <Head>
@@ -32,15 +111,47 @@ const Home: NextPage = () => {
             </div>
             <form>  
             <div className="flex gap-y-4 gap-x-4 items-center justify-center ">
-                <Input id="FirstName" clearable bordered color="primary" labelPlaceholder="First Name" />
-                <Input id="LasttName" clearable bordered color="primary" labelPlaceholder="Last Name" />
-                <Input clearable bordered width="250px" color="primary" labelPlaceholder="email address" />
+                <Input 
+                    required = {true}
+                    status={FirstNameStatus}
+                    clearable                      
+                    color="primary" 
+                    labelPlaceholder="First Name"
+                    onChange={(e) => handleFormInput(e, "FirstName")}
+                />
+                <Input 
+                    required = {true}
+                    status={LastNameStatus}
+                    clearable
+                    color="primary" 
+                    labelPlaceholder="Last Name"
+                    onChange={(e) => handleFormInput(e, "LastName")}
+                />
+                <Input
+                    required = {true} 
+                    status={EmailStatus}
+                    clearable 
+                    width="250px" 
+                    color="primary" 
+                    labelPlaceholder="email address"
+                    onChange={(e) => handleFormInput(e, "EmailAdr")}
+                />
             </div>
             <div className="flex pt-12 gap-y-4 gap-x-4 items-center justify-center">
-                <Textarea id="MSG" color="primary" bordered placeholder="Message" minRows={1} width="400px"/>
+                <Textarea 
+                    required = {true}
+                    status={MessageStatus}
+                    color="primary" 
+                    placeholder="Message" 
+                    minRows={1} 
+                    width="400px"
+                    onChange={(e) => handleFormInput(e, "MSG")}
+                />
             </div>
             <div className="flex pt-12 gap-y-4 gap-x-4 items-center justify-center">
-                <Button onPress={ButtonPressedHandler} >Send</Button>
+                <Button onPress={FormSubmissionHandler} shadow color="gradient">
+                        Send      
+                </Button>
             </div>
             </form>
 
