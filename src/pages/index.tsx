@@ -68,7 +68,7 @@ const Home: NextPage = () => {
         <meta name="description" content="David Brooks" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#CAF0F8] to-[#023E8A]">
+      <main className="flex min-h-screen flex-col items-center py-20 bg-gradient-to-b from-[#CAF0F8] to-[#023E8A]">
       <Text className="text-center"
         h1
         size={60}
@@ -77,16 +77,12 @@ const Home: NextPage = () => {
         }}
         weight="bold"
       >
-        <span className="sm:hidden">
-          <br/>
-        </span>
-
          David Austin Brooks
       </Text>
         
         <div className="container flex flex-col items-center justify-center gap-12 py-8">
         
-        <div className="flex w-full px-2 gap-y-4 gap-x-4 flex-wrap justify-center">
+        <div className="flex w-full px-4 gap-y-4 gap-x-4 flex-wrap justify-center">
         {ThingsGoodAt.map((item) => (
                           <div
                             key={item.Text} 
