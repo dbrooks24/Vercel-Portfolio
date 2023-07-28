@@ -14,7 +14,11 @@ export default function Header() {
   return (
     <>
       <div className="w-full bg-black py-2 px-4 sm:px-6 lg:px-8 flex align-middle items-center justify-end gap-x-4">
-        <Link href="https://www.linkedin.com/in/david-brooks-004900116/">
+        <Link
+          href="https://www.linkedin.com/in/david-brooks-004900116/"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
           <Image
             className=""
             src="/In-White-14@2x.png"
@@ -24,7 +28,11 @@ export default function Header() {
           />
         </Link>
 
-        <Link href="https://github.com/dbrooks24">
+        <Link
+          href="https://github.com/dbrooks24"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
           <Image
             className=""
             src="/github-mark-white.svg"
