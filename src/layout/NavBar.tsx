@@ -83,7 +83,7 @@ export default function Header() {
                         type="button"
                         href="/Contact"
                       >
-                        <span className="absolute inset-y-3 right-0 rounded-full h-3 w-3 bg-[#002664] bg-opacity-90 animate-ping"></span>
+                        <span className="absolute inset-y-3 right-2 sm:right-0 rounded-full h-3 w-3 bg-[#002664] bg-opacity-90 animate-ping"></span>
                         <ChatBubbleBottomCenterTextIcon
                           className="h-8 w-8 "
                           aria-hidden="true"
