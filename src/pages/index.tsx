@@ -111,7 +111,7 @@ const Home: NextPage = () => {
               together all kinds of things just to see how they worked. I love
               to learn new things and I am always looking for a way to expand my
               knowledge. Most of all, I love taking the knowledge I acquire and
-              using that to better other people's lives as well as mine.
+              using that to better other people&apos;s lives as well as mine.
             </div>
           </div>
         </div>
