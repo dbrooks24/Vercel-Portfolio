@@ -22,8 +22,8 @@ export default function Header() {
           <Image
             className=""
             src="/In-White-14@2x.png"
-            width="28"
-            height="28"
+            width="18"
+            height="18"
             alt="Logo"
           />
         </Link>
@@ -36,8 +36,8 @@ export default function Header() {
           <Image
             className=""
             src="/github-mark-white.svg"
-            width="28"
-            height="28"
+            width="18"
+            height="18"
             alt="Logo"
           />
         </Link>
