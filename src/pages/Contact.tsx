@@ -2,11 +2,12 @@ import { type NextPage } from "next";
 import Image from "next/image";
 import Head from "next/head";
 import Link from "next/link";
-
+import SendEmail from '../pages/api/sendgrid';
 
 
 import { Input, Textarea, Button, FormElement} from "@nextui-org/react";
 import { useState } from "react";
+import { request } from "https";
 
 
 // Home page for starting a test
@@ -27,18 +28,72 @@ const Home: NextPage = () => {
 
 
     //handlers
-    const FormSubmissionHandler = () => {
-        event?.preventDefault(); //prevent the deafult form submission behavior
+    const FormSubmissionHandler = async () => {
+        event?.preventDefault();
+      
+         // Check if any of the fields are blank
+            if (FirstName === "") {
+                setFirstNameStatus("error");
+            }
+            if (LastName === "") {
+                setLastNameStatus("error");
+            }
+            if (Email === "") {
+                setEmailStatus("error");
+            }
+            if (Message === "") {
+                setMessageStatus("error");
+            }
         
-            alert(
-                "FirstName: " + FirstName + "\n" +
-                "LastName: " + LastName + "\n" +
-                "Email: " + Email + "\n" +
-                "Message: " + Message 
-            ) 
+        
+        // Check if any of the fields have an error status
+        if (FirstNameStatus === "error" || LastNameStatus === "error" || EmailStatus === "error" || MessageStatus === "error") 
+        {
+            // Handle the case where a field has an error status (e.g., show an error message)
+            console.error('Please fill out all fields correctly');
             
+            return; // Stop further execution
+        }
 
-    };
+
+        const formData = {
+          FirstName: FirstName,
+          LastName: LastName,
+          Email: Email,
+          Message: Message
+        };
+      
+        try 
+        {
+            const response = await fetch('/api/sendgrid', 
+            {
+                method: 'POST',
+                headers: 
+                {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            });
+      
+            if (response.ok) 
+            {
+                // Handle success (e.g., show a success message to the user)
+                console.log('Email sent successfully');
+            } 
+          
+            else 
+            {
+                // Handle error
+                console.error('Error sending email');
+            }
+        } 
+        
+        catch (error) {
+          // Handle network or other errors
+          console.error('Error:', error);
+        }
+      };
+      
 
     const handleFormInput = (event: React.ChangeEvent<FormElement>, InputID: string) => {
         const newInputValue = event.target.value;
