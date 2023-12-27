@@ -42,17 +42,34 @@ const Resume: NextPage = () => {
       </Head>
       <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#CAF0F8] to-[#023E8A]">
         <div className="container flex-col items-center justify-center flex">
-            <div className="w-5/6 px-8 py-8 bg-white/70 rounded-md shadow-2xl flex items-center justify-center">
+            
+          <span className="hidden sm:flex text-center items-center flex flex-col pb-4">
+            <Tooltip
+                color="default" // Add required color property
+                css={{ zIndex: 999 }} // Add required css property
+                content="Open my Résumé in a new tab"
+                placement="top"
+                contentColor="default" // Add required contentColor property
+                initialVisible={false}
+            >
+                <Button onPress={ButtonPressedHandler}>
+                    Open PDF Résumé
+                </Button>
+            </Tooltip>
+          </span>
+
+            <div className="w-5/6 px-4 py-4 bg-white/70 rounded-md shadow-2xl flex items-center justify-center">
                 <object className="hidden sm:flex" data="/DavidBrooks_resume - with deliverables - no addr.pdf" type="application/pdf" width="100%"  height={pdfHeight + "px"}>
                 </object>
-                <span className="sm:hidden text-center items-center flex flex-col gap-y-14">
+                <span className="sm:hidden text-center items-center flex flex-col gap-y-2">
                     Mobile View Detected:
                     <Tooltip
                         color="default" // Add required color property
                         css={{ zIndex: 999 }} // Add required css property
                         content="Open my Résumé in a new tab"
+                        placement="bottom"
                         contentColor="default" // Add required contentColor property
-                        initialVisible={true}
+                        initialVisible={false}
                     >
                         <Button onPress={ButtonPressedHandler}>
                             Open PDF Résumé
