@@ -30,29 +30,36 @@ const Home: NextPage = () => {
     //handlers
     const FormSubmissionHandler = async () => {
         event?.preventDefault();
+
+        console.log('I am in the handler')
       
          // Check if any of the fields are blank
-            if (FirstName === "") {
+            if (FirstName == "") {
                 setFirstNameStatus("error");
             }
-            if (LastName === "") {
+            if (LastName == "") {
                 setLastNameStatus("error");
             }
-            if (Email === "") {
+            if (Email == "") {
                 setEmailStatus("error");
             }
-            if (Message === "") {
+            if (Message == "") {
                 setMessageStatus("error");
             }
         
         
         // Check if any of the fields have an error status
-        if (FirstNameStatus === "error" || LastNameStatus === "error" || EmailStatus === "error" || MessageStatus === "error") 
+        if ((FirstNameStatus === "error" || FirstNameStatus === "default") || (LastNameStatus === "error" || LastNameStatus === "default") || (EmailStatus === "error" || EmailStatus === "default") || (MessageStatus === "error" || MessageStatus === "default")) 
         {
             // Handle the case where a field has an error status (e.g., show an error message)
-            console.error('Please fill out all fields correctly');
+            alert('Please fill out all fields correctly');
             
             return; // Stop further execution
+        }
+        else
+        {
+            console.log('In the else')
+            console.log('FirstNameStatus:',FirstNameStatus)
         }
 
 
