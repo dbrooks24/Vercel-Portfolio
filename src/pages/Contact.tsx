@@ -85,7 +85,14 @@ const Home: NextPage = () => {
             if (response.ok) 
             {
                 // Handle success (e.g., show a success message to the user)
+                
+                setFirstNameStatus("success");
+                setLastNameStatus("success");
+                setEmailStatus("success");
+                setMessageStatus("success");
+                
                 console.log('Email sent successfully');
+                alert('Email sent successfully');
             } 
           
             else 
