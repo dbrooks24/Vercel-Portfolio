@@ -32,7 +32,16 @@ const Home: NextPage = () => {
         event?.preventDefault();
 
         console.log('I am in the handler')
-      
+
+        /*
+        alert(
+            'FirstName Value:' + FirstName + '\n' +
+            'LastName Value:' + LastName + '\n' +
+            'Email Value:' + Email + '\n' +
+            'Message Value:' + Message + '\n'
+        )
+        */
+       
          // Check if any of the fields are blank
             if (FirstName == "") {
                 setFirstNameStatus("error");
@@ -49,7 +58,7 @@ const Home: NextPage = () => {
         
         
         // Check if any of the fields have an error status
-        if ((FirstNameStatus === "error" || FirstNameStatus === "default") || (LastNameStatus === "error" || LastNameStatus === "default") || (EmailStatus === "error" || EmailStatus === "default") || (MessageStatus === "error" || MessageStatus === "default")) 
+        if ((FirstNameStatus === "error" || FirstName == "") || (LastNameStatus === "error" || LastName == "") || (EmailStatus === "error" || Email == "") || (MessageStatus === "error" || Message == "")) 
         {
             // Handle the case where a field has an error status (e.g., show an error message)
             alert('Please fill out all fields correctly');
