@@ -20,7 +20,7 @@ const Resume: NextPage = () => {
 
     useEffect(() => {
       const calculatePdfHeight = () => {
-        const adjustedHeight = window.innerHeight - 280; // Adjust this value as needed
+        const adjustedHeight = window.innerHeight - 320; // Adjust this value as needed
         setPdfHeight(adjustedHeight);
       };
       calculatePdfHeight(); // Call the function to calculate the initial height
@@ -40,7 +40,7 @@ const Resume: NextPage = () => {
         <meta name="description" content="David Brooks" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#CAF0F8] to-[#023E8A]">
+      <main className="flex min-h-screen flex-col items-center py-[95px] bg-gradient-to-b from-[#CAF0F8] to-[#023E8A]">
         <div className="container flex-col items-center justify-center flex">
             
           <span className="hidden sm:flex text-center items-center flex flex-col pb-4">
@@ -58,7 +58,7 @@ const Resume: NextPage = () => {
             </Tooltip>
           </span>
 
-            <div className="w-5/6 px-4 py-4 bg-white/70 rounded-md shadow-2xl flex items-center justify-center">
+            <div className="w-full px-4 py-4 bg-white/70 rounded-md shadow-2xl flex items-center justify-center">
                 <object className="hidden sm:flex" data="/DavidBrooks_resume - with deliverables - no addr.pdf" type="application/pdf" width="100%"  height={pdfHeight + "px"}>
                 </object>
                 <span className="sm:hidden text-center items-center flex flex-col gap-y-2">
@@ -72,7 +72,7 @@ const Resume: NextPage = () => {
                         initialVisible={false}
                     >
                         <Button onPress={ButtonPressedHandler}>
-                            Open PDF Résumé
+                            Open PDF Résumé In New Tab
                         </Button>
                     </Tooltip>
                 </span>

@@ -13,10 +13,10 @@ export default function Footer() {
       <div className="fixed bottom-0 flex w-full text-sm text-white justify-center bg-black py-1">
         <div className="container text-center mx-auto">
             <div className="flex justify-center">
-              Built With: 
+              Built With: &nbsp;
               {techUsed.map((item) => (              
-                  <div key={item} className="mx-1">
-                    {item}
+                  <div key={item} className="">
+                    &nbsp;{item}
                   </div>
                 ))}
             </div>
