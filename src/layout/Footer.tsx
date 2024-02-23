@@ -10,15 +10,12 @@ export default function Footer() {
   ]
   return (
     <>
-      <div className="flex w-full text-white justify-center bg-black py-2">
+      <div className="fixed bottom-0 flex w-full text-sm text-white justify-center bg-black py-1">
         <div className="container text-center mx-auto">
-          <p>Technologies Used:</p>
-            <div className="flex justify-center mt-1">
-              { techUsed.map((item) => (              
-                  <div
-                    key={item}
-                    className="mx-1"
-                  >
+            <div className="flex justify-center">
+              Technologies used: 
+              {techUsed.map((item) => (              
+                  <div key={item} className="mx-1">
                     {item}
                   </div>
                 ))}
