@@ -10,9 +10,6 @@ const ThingsGoodAt = [
     Text: "Adobe CC Suite",
   },
   {
-    Text: "Apple Certified",
-  },
-  {
     Text: "Apple Certified Technician",
   },
   {
@@ -58,7 +55,7 @@ const ThingsGoodAt = [
     Text: "Azure",
   },
   {
-    Text: "Cisco ESA",
+    Text: "Cisco Email Security Appliances",
   },
 ];
 
