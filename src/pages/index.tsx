@@ -7,6 +7,9 @@ import { Text } from "@nextui-org/react";
 
 const ThingsGoodAt = [
   {
+    Text: "Azure B2C",
+  },
+  {
     Text: "Adobe CC Suite",
   },
   {
