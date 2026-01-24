@@ -81,7 +81,8 @@ export default function Header() {
                       <Link
                         className="Navbutton-unselected text-black  hover:text-white focus:outline-none py-1 px-1"
                         type="button"
-                        href="/Contact"
+                        href="mailto:davidabrooks392@outlook.com"
+                        //href="/Contact"
                       >
                         <span className="absolute inset-y-3 right-2 sm:right-0 rounded-full h-3 w-3 bg-[#002664] bg-opacity-90 animate-ping"></span>
                         <ChatBubbleBottomCenterTextIcon
