@@ -9,7 +9,7 @@ import { Button, Tooltip } from "@nextui-org/react";
 
 
 const ButtonPressedHandler = () => {
-    window.open("/DavidBrooks_resume - with deliverables - no addr.pdf");
+    window.open("/DavidBrooks_resume.pdf");
 }
 
 
@@ -59,7 +59,7 @@ const Resume: NextPage = () => {
           </span>
 
             <div className="w-full px-4 py-4 bg-white/70 rounded-md shadow-2xl flex items-center justify-center">
-                <object className="hidden sm:flex" data="/DavidBrooks_resume - with deliverables - no addr.pdf" type="application/pdf" width="100%"  height={pdfHeight + "px"}>
+                <object className="hidden sm:flex" data="/DavidBrooks_resume.pdf" type="application/pdf" width="100%"  height={pdfHeight + "px"}>
                 </object>
                 <span className="sm:hidden text-center items-center flex flex-col gap-y-2">
                     Mobile View Detected:
