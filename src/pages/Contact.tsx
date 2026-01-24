@@ -185,7 +185,7 @@ const Home: NextPage = () => {
             
             
             <div className="pb-12 text-center font-bold tracking-tight text-slate-700 text-5xl">
-                <span className="">Send Me A Message</span>
+                <span className="">COMING SOON: Send Me A Message</span>
             </div>
             <form>  
             <div className="flex gap-y-4 gap-x-4 items-center justify-center ">
