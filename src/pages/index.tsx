@@ -89,7 +89,7 @@ const Home: NextPage = () => {
           h1
           size={60}
           css={{
-            textGradient: "45deg, #cedbff -20%, #3860c5 100%",
+            textGradient: "45deg, #cedbff -20%, #8bacff 100%",
           }}
           weight="bold"
         >
@@ -102,7 +102,7 @@ const Home: NextPage = () => {
           weight="thin"
           css={{
             color: "#cedbff",
-            textShadow: "0 3px 4px rgba(0, 0, 0, 0.88)",
+            textShadow: "0 2px 3px rgba(0, 0, 0, 0.88)",
           }}
         >
           Cyber Security Automation Developer
