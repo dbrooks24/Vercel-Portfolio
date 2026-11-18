@@ -86,6 +86,18 @@ const Home: NextPage = () => {
         >
           David Austin Brooks
         </Text>
+        <Text
+          className="text-center"
+          h1
+          size={60}
+          css={{
+            textGradient: "45deg, $blue700 -20%, $blue800 100%",
+          }}
+          weight="thin"
+        >
+          CyberSecurity Automation Developer
+        </Text>
+
 
         <div className="container flex flex-col items-center justify-center gap-12 py-8 sm:w-auto w-5/6">
           <div className="flex w-full px-4 gap-y-4 gap-x-4 flex-wrap justify-center">
