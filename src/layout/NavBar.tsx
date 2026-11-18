@@ -79,7 +79,7 @@ export default function Header() {
                   <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:pr-0">
                     <div className="flex space-x-4">
                       <Link
-                        className="Navbutton-unselected text-black  hover:text-white focus:outline-none py-1 px-1"
+                        className="Navbutton-unselected focus:outline-none py-1 px-1"
                         type="button"
                         href="mailto:davidabrooks392@outlook.com"
                         //href="/Contact"
