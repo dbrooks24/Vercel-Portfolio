@@ -101,8 +101,8 @@ const Home: NextPage = () => {
           size={60}
           weight="thin"
           css={{
-            color: "#1E3A8A",
-            textShadow: "0 1px 2px rgba(255,255,255,0.4)",
+            color: "#cedbff",
+            textShadow: "0 3px 4px rgba(0, 0, 0, 0.88)",
           }}
         >
           Cyber Security Automation Developer
