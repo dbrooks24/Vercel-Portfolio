@@ -7,6 +7,9 @@ import { Text } from "@nextui-org/react";
 
 const ThingsGoodAt = [
   {
+    Text: "Demisto/XSOAR",
+  },
+  {
     Text: "Azure B2C",
   },
   {
