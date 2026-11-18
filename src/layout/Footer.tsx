@@ -5,8 +5,7 @@ export default function Footer() {
     'Next.js',
     'TypeScript',
     'TailWinds',
-    'Vercel',
-    'SendGrid'
+    'Vercel'
   ]
   return (
     <>
@@ -14,11 +13,12 @@ export default function Footer() {
         <div className="container text-center mx-auto">
             <div className="flex justify-center">
               Built With: &nbsp;
-              {techUsed.map((item) => (              
-                  <div key={item} className="">
-                    &nbsp;{item}
-                  </div>
-                ))}
+              {techUsed.map((item, index) => (
+                <span key={item}>
+                  {item}
+                  {index < techUsed.length - 1 ? ", " : ""}
+                </span>
+              ))}
             </div>
           </div>
       </div>
