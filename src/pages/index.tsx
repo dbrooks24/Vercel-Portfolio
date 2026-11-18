@@ -74,7 +74,7 @@ const Home: NextPage = () => {
         <meta name="description" content="David Brooks" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="flex min-h-screen flex-col items-center sm:py-20 py-2 bg-gradient-to-b from-[#CAF0F8] to-[#023E8A]">
+      <main className="flex min-h-screen flex-col items-center sm:py-20 py-2 bg-gradient-to-b from-[#0F172A] via-[#1E3A8A] to-[#020617]">
         <Text
           className="text-center"
           h1
