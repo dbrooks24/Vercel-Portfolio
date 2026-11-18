@@ -89,7 +89,7 @@ const Home: NextPage = () => {
           h1
           size={60}
           css={{
-            textGradient: "45deg, $blue700 -20%, $blue800 100%",
+            textGradient: "45deg, #8ba0db -20%, #3054af 100%",
           }}
           weight="bold"
         >
