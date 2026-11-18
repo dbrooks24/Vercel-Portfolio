@@ -88,16 +88,16 @@ const Home: NextPage = () => {
         </Text>
         <Text
           className="text-center"
-          h1
+          h2
           size={60}
-          css={{
-            textGradient: "45deg, #90E0EF 0%, #FFFFFF 100%",
-          }}
           weight="thin"
+          css={{
+            color: "#1E3A8A",
+            textShadow: "0 1px 2px rgba(255,255,255,0.4)",
+          }}
         >
           Cyber Security Automation Developer
         </Text>
-
 
         <div className="container flex flex-col items-center justify-center gap-12 py-8 sm:w-auto w-5/6">
           <div className="flex w-full px-4 gap-y-4 gap-x-4 flex-wrap justify-center">
