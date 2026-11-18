@@ -35,7 +35,7 @@ export default function Header() {
       <Disclosure
         as="nav"
         aria-label="navigation bar"
-        className="sticky w-full top-0 bg-[#414141] bg-opacity-80"
+        className="sticky w-full top-0 bg-[#414141]"
       >
         {({ open }) => {
           return (
