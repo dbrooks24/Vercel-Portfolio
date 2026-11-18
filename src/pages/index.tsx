@@ -91,11 +91,11 @@ const Home: NextPage = () => {
           h1
           size={60}
           css={{
-            textGradient: "45deg, $blue700 -20%, $blue800 100%",
+            textGradient: "45deg, #90E0EF 0%, #FFFFFF 100%",
           }}
           weight="thin"
         >
-          CyberSecurity Automation Developer
+          Cyber Security Automation Developer
         </Text>
 
 
